@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeTro</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/d77f5fc017.js" crossorigin="anonymous"></script>
+    <!-- tailwind css and daisy ui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-mulish">
+    <header class="container mx-auto mt-4">
+        <section>
+            <div class="navbar bg-base-100">
+                <div class="flex-1">
+                    <a class=" font-extrabold  text-4xl">MeTro</a>
+                </div>
+                <div class="flex  lg:space-x-6 mr-8">
+                    <button class="tooltip" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)"><img
+                            src="./images/Frame (1).svg" alt="">
+                        <span class="tooltiptext">Home</span></button>
+                    <button class="tooltip" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)"><img
+                            src="./images/Frame (2).svg" alt="">
+                        <span class="tooltiptext">Edit</span></button>
+                    <button class="tooltip" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)"><img
+                            src="./images/Frame (3).svg" alt="">
+                        <span class="tooltiptext">Contact</span></button>
+                    <button class="tooltip" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)"><img
+                            src="./images/Frame (4).svg" alt="">
+                        <span class="tooltiptext">Country</span></button>
+                </div>
+                <div class="flex">
+                    <button class="btn bg-[#797DFC] px-8 text-white rounded-3xl ">Sign In</button>
+                </div>
+            </div>
+            </div>
+            <div class="hero lg:w-full lg:h-[550px] rounded-3xl bg-[#12132D] mt-8"
+                style="background-image: url(/images/bgbanner.png);">
+                <div class="flex flex-col lg:flex-row gap-2 lg:gap-96">
+                    <div class=" text-white">
+                        <h2 class="text-6xl font-bold">Welcome to the<br><span class="text-slate-700">MeTro</span> Forum
+                        </h2>
+                        <p class="mt-6">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+                        <label class="input input-bordered flex items-center rounded-3xl gap-2 mt-10">
+                            <input type="text" id="search-box" class="grow text-black"
+                                placeholder="Search here anything" />
+                            <button id="search-btn" onclick="handelSearch()"
+                                class=" p-4 badge badge-info text-white text-sm">Search </button>
+                        </label>
+                    </div>
+                    <div class="bg-white lg:w-64 lg:h-52  rounded-xl  space-y-3 p-6">
+                        <div class="flex justify-between text-xl font-semibold">
+                            <h5>Registered Users</h5>
+                            <h5>01</h5>
+                        </div>
+                        <div class="flex justify-between text-xl font-semibold">
+                            <h5>Forum</h5>
+                            <h5>05</h5>
+                        </div>
+                        <div class="flex justify-between text-xl font-semibold">
+                            <h5>Topics</h5>
+                            <h5>01</h5>
+                        </div>
+                        <div class="flex justify-between text-xl font-semibold">
+                            <h5>Replies</h5>
+                            <h5>01</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main class="container mx-auto my-16">
+        <section class="">
+
+            <div class="text-center">
+                <h4 class="text-5xl font-extrabold mb-4">Let’s Discuss</h4>
+                <p class="m-2 lg:w-[600px] mx-auto text-center">Yes, you can run unit tests and view the results
+                    directly within the app. The integrated testing features allow for a streamlined .</p>
+            </div>
+            <div id="loading-spinner" class="text-center my-10 hidden">
+                <span class="loading loading-spinner loading-xs"></span>
+                <span class="loading loading-spinner loading-sm"></span>
+                <span class="loading loading-spinner loading-md"></span>
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-10 my-6">
+                <div id="categoy-sec" class=""></div>
+                <div class="bg-[#12132D0D] w-96 m-4 p-4 rounded-xl">
+                    <div class="flex  justify-between text-xl font-semibold">
+                        <h4>Title</h4>
+                        <div class="flex space-x-2">
+                            <img src="./images/frame yes.svg" alt="">
+                            <h4>Mark as read (<span id="added-total">0</span>)</h4>
+                        </div>
+                    </div>
+                    <div id="aside-bar" class=""></div>
+
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#12132D] m-2  rounded-[30px]">
+            <div class="flex flex-col lg:flex-row justify-between p-8">
+                <div class="text-white pt-20 pl-10">
+                    <h2 class="text-5xl font-bold mb-6">Join Our Forum</h2>
+                    <p class="opacity-60 w-96">Share your favorite opinion and win and wp forum coffee mug! Yes, you can
+                        run unit tests and view the results directly within the app. </p>
+                    <button class="btn bg-[#797DFC] rounded-3xl mt-6">Registered Now</button>
+                </div>
+                <div class="">
+                    <img src="/images/joinforum.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="my-16">
+            <div class="">
+                <div class="text-center">
+                    <h2 class="text-5xl font-extrabold mb-4">Latest Posts</h2>
+                    <p class="m-2 lg:w-[600px] mx-auto text-center">Yes, you can run unit tests and view the results
+                        directly within the app. The integrated testing features allow for a streamlined .</p>
+                </div>
+                <div id="loading-spinnerd" class="text-center my-10 hidden">
+                    <span class="loading loading-spinner loading-xs"></span>
+                    <span class="loading loading-spinner loading-sm"></span>
+                    <span class="loading loading-spinner loading-md"></span>
+                    <span class="loading loading-spinner loading-lg"></span>
+                </div>
+                <div id="post-more"
+                    class=" grid p-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <footer class="footer footer-center h-[500px] p-10 bg-base-200 text-base-content rounded">
+            <div class="pt-20">
+                <h2 class="text-5xl font-extrabold">MeTro</h2>
+                <p>Yes, you can run unit tests and view the results directly within the app.</p>
+            </div>
+            <nav>
+                <div class="grid grid-flow-col gap-4 ">
+                    <i class="fa-brands text-4xl fa-facebook"></i>
+                    <i class="fa-brands text-4xl fa-twitter"></i>
+                    <i class="fa-brands text-4xl fa-instagram"></i>
+                    <i class="fa-brands text-4xl fa-github"></i>
+                </div>
+                <hr>
+            </nav>
+            <div class="flex flex-col w-full">
+                <div class="divider"></div>
+            </div>
+            <aside>
+                <p>2017, All Rights Reserved.</p>
+            </aside>
+        </footer>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
