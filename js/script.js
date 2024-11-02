@@ -119,8 +119,8 @@ const loadPost = async () => {
                         <div class="flex space-x-4 pl-8 pt-4">
                             <img src="./images/published.svg" alt="">
                             <h6>${
-                              item.author.posted_date
-                                ? item.author.posted_date
+                              item.author.posted_dat
+                                ? item.author.posted_dat
                                 : "No Published Date"
                             }</h6>
                         </div>
